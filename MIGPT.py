@@ -209,7 +209,7 @@ class MiGPT:
                 if new_timestamp > self.last_timestamp:
                     self.last_timestamp = new_timestamp
                     query = last_record.get("query", "")
-                    if query.startswith('闭嘴') or query.startswith('停止'):  # 反悔操作
+                    if query.startswith('停止'):  # 反悔操作
                         await self.stop_if_xiaoai_is_playing()
                         continue
                     if query.startswith('打开高级对话') or query.startswith('开启高级对话'):
